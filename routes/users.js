@@ -13,7 +13,7 @@ router.post('/', insertUser);
 
 router.get('/:id', getSpeuser);
 
-router.delete('/:id', deleteuser);
+router.post('/del/:id', deleteuser);
 
 router.post('/:id',updateuser);
 
