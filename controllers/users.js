@@ -5,16 +5,6 @@ let users = [];
 export const getUsers = (req,res) => {
 	res.send(users);
 }
-
-/*export const createUser = function (req,res) {
-	const user= req.body;
-
-
-	users.push({...user,id: uuidv4() });
-
-	res.send(`User with the name ${user.name} added to the database!`);
-}
-*/
 export const getUser = (req, res) => {
 	const { id }=req.params;
 	//const { name, Age, Gender, id }
@@ -44,3 +34,8 @@ export const updateUser = (req,res) => {
 	res.send(`User with the id ${id} has been updated`);
 
 }
+
+// export const Register = (req,res) => {
+// 	const {FirstName,LastName,email,password,DateOfBirth}=req.body;
+// 	console.log("registerPage");
+// }

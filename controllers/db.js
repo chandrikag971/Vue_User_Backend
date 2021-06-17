@@ -19,6 +19,7 @@ connection.connect(function(err) {
 });
 
 let users=[]
+//let details=[]
 
 export const getResults = function(req,res) {
 	//console.log("Mem.;oo");
@@ -147,22 +148,57 @@ export const updateuser = function(req,res) {
 	let query=connection.query(sql,(err,result,fields) => {
 		if (err) throw err;
 		console.log("no.of records updated "+result.affectedRows);
-		res.send("no.of records updated "+result.affectedRows);
+		res.send("no.of records updatd "+result.affectedRows);
 	});
 	}
 }
 
 
+// export const Register = function(req,res) {
+//     //const password = req.body.password;
+//     //const encryptedPassword = bcrypt.hash(password, saltRounds)
+//     var details = {
+//         "FirstName":req.body.firstname,
+//         "LastName":req.body.lastname,
+//         "email":req.body.email,
+//         "password":req.body.password,
+//         "DateOfBirth":req.body.dateofbirth
+//    }
+//   console.log("values are testing");
+//   let sql="insert into authentication(FirstName,LastName,email,password,DateOfBirth) values ('"+ details["FirstName"] +"'," + details["LastName"]+ ",'"+ details["email"]+  "','"+ details["password"] +"','"+ details["DateOfBirth"] +"')";
+//   console.log(sql);
+//   console.log(details)
+
+//   let query=connection.query(sql,(err,result,fields) => {
+//       if(err) throw err;
+//       console.log("user registered sucessfully");
+//       res.send("user registered sucessfully");
+//   });
+// }
 
 
 
-
-
-
-
-
-
-
+// export const Register=function(req,res) {
+//     //var today = new Date();
+//     var details={
+//         "FirstName":req.body.FirstName,
+//         "LastName":req.body.LastName,
+//         "email":req.body.email,
+//         "password":req.body.password,
+//         "DateOfBirth":req.body.DateOfBirth
+//     }
+//     connection.query('INSERT INTO authentication SET ?',details, function (error, results, fields) {
+//       if (error) {
+//           res.send('there are some error with query');
+//           console.log('there are some error with query');
+//       }
+//       else{
+//           res.send('user registered sucessfully');
+//           console.log('user registered sucessfully');
+//       }
+//     });
+// }
+//export default register;
 
 
 
